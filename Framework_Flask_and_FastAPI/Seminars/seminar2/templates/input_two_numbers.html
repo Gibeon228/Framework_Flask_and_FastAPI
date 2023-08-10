@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Calculator
+{% endblock %}
+
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label for=num1>Number1</label>
+            <input type="number" placeholder="Please enter first number: " id="number1" name="number1">
+            <label for="num2">Number2</label>
+            <input type="number" placeholder="Please enter second number: " id="number2" name="number2">
+        </div>
+        <button type="submit" name="sum">Sum</button>
+        <button type="submit" name="sub">Subtraction</button>
+        <button type="submit" name ="mult">Multiplication</button>
+        <button type="submit" name="div">Division</button>
+
+    </form>
+{% endblock %}
+

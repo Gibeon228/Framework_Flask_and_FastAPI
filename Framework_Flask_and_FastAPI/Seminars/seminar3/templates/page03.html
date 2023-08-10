@@ -1,0 +1,19 @@
+<!doctype html>
+{% extends 'base.html' %}
+
+
+{% block title %}
+    books
+{% endblock %}
+
+{% block content %}
+    {% for student in students %}
+        {% for grade in grades %}
+            {% if student.id == grade.student_id %}
+            <p>
+                {{ student.first_name }}, {{ student.last_name }}, {{ grade.grade }}
+            </p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

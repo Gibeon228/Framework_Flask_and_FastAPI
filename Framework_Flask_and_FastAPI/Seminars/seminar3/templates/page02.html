@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    books
+{% endblock %}
+
+{% block content %}
+{% for book in books %}
+    {% for author in authors %}
+        {% if author.id == book.author_id %}
+            <p>
+                {{ book.name }}, {{ author.first_name }}, {{ author.last_name }}
+            </p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+{% endblock %}
